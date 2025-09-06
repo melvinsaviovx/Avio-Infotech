@@ -1,0 +1,164 @@
+.services-futuristic {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1f, #1c1b3a);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0rem;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f0c27b, #4b134f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px #f0c27b50;
+  text-align: center;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.brand {
+  color: #f0c27b;
+  font-weight: bold;
+}
+
+/* Services Grid */
+.services-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  z-index: 1;
+}
+
+.service-block {
+  position: relative;
+  max-width: 300px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e6f0;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(240, 194, 123, 0.2);
+  animation: floatIn 1s ease var(--delay) forwards;
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.service-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(75, 19, 79, 0.5);
+}
+
+.service-block .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-block h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #f0c27b;
+  text-shadow: 0 0 10px #f0c27b;
+}
+
+.service-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Why Choose */
+.why-choose {
+  margin: 5rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+}
+
+/* CTA */
+.cta-block {
+  margin-top: 4rem;
+  padding: 3rem;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #f0c27b, #4b134f);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.cta-block h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-block p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #f9f9f9;
+}
+
+.cta-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1c1b3a;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #f0c27b, 0 0 30px #4b134f;
+}
+
+/* Animations */
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(20px) rotateX(5deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
+}
+
+/* Particles Layer */
+#particles {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .service-block {
+    max-width: 90%;
+    text-align: center;
+  }
+  .service-block h3 { font-size: 1.3rem; }
+}

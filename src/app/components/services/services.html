@@ -1,0 +1,22 @@
+<section class="services-futuristic">
+  <!-- Title -->
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-intro">
+    At <span class="brand">Techavio</span>, our mission is to deliver cutting-edge
+    IT services that not only solve today’s challenges but also shape tomorrow’s
+    possibilities.
+  </p>
+
+  <!-- Services Grid -->
+  <div class="services-grid">
+    <div
+      class="service-block"
+      *ngFor="let service of services; let i = index"
+      [style.--delay]="i * 0.2 + 's'"
+    >
+      <div class="icon">{{ service.icon }}</div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+</section>
