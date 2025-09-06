@@ -1,0 +1,17 @@
+.footer-futuristic {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #1c1b3a, #0f0f1f);
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #a0a0b0;
+  padding-bottom: 2rem;
+}
