@@ -1,7 +1,7 @@
 .footer-futuristic {
   position: relative;
   width: 100%;
-  background: linear-gradient(135deg, #1c1b3a, #0f0f1f);
+  background: linear-gradient(135deg, #0f0f1f, #1c1b3a);
   color: #cbd5e1;
   display: flex;
   flex-direction: column;

@@ -23,7 +23,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem 0 2rem;
+  padding: 0 4rem 0 4rem;
   background: linear-gradient(135deg, #0f0f1f, #1c1b3a);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

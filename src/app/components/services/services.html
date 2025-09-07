@@ -1,5 +1,4 @@
-<section class="services-futuristic">
-  <!-- Title -->
+<!-- <section class="services-futuristic">
   <h2 class="section-title">Our Services</h2>
   <p class="section-intro">
     At <span class="brand">Avio Infotech</span>, our mission is to deliver cutting-edge
@@ -7,7 +6,6 @@
     possibilities.
   </p>
 
-  <!-- Services Grid -->
   <div class="services-grid">
     <div
       class="service-block"
@@ -19,4 +17,25 @@
       <p>{{ service.description }}</p>
     </div>
   </div>
+</section> -->
+
+
+<section class="services-futuristic">
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-intro">
+    At <span class="brand">Avio Infotech</span>, we deliver IT solutions that solve today’s challenges and shape tomorrow’s possibilities.
+  </p>
+
+  <div class="services-flow">
+    <div class="service" *ngFor="let service of services; let i = index" [style.--delay]="i * 0.3 + 's'">
+      <div class="icon">{{ service.icon }}</div>
+      <div class="text">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+    <svg class="flow-line" viewBox="0 0 0 0"></svg>
+  </div>
+
+  <canvas id="particles"></canvas>
 </section>
