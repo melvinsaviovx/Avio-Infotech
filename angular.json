@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Techavio": {
+    "avioinfotech": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,8 +13,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/avioinfotech",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "polyfills": [],
             "assets": [
               {
                 "glob": "**/*",
@@ -22,26 +25,25 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/luxury-enhancements.css",
+              "src/atelier.css",
+              "src/maison.css"
             ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "750kB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "35kB",
+                  "maximumError": "65kB"
                 }
               ],
               "outputHashing": "all"
@@ -58,36 +60,18 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Techavio:build:production"
+              "buildTarget": "avioinfotech:build:production"
             },
             "development": {
-              "buildTarget": "Techavio:build:development"
+              "buildTarget": "avioinfotech:build:development"
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ]
-          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "8c52a4dc-8337-4b49-987f-ae18da8f1e31"
+    "analytics": "cf66f5eb-ce40-463f-9f2e-161d5cfed361"
   }
 }
