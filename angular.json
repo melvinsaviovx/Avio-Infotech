@@ -25,10 +25,7 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "src/luxury-enhancements.css",
-              "src/atelier.css",
-              "src/maison.css"
+              "src/styles.css"
             ],
             "scripts": []
           },

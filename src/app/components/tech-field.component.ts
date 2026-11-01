@@ -43,6 +43,7 @@ export class TechFieldComponent implements AfterViewInit, OnDestroy {
     }, { threshold:0.01 });
     this.visibilityObserver.observe(el);
     document.addEventListener('visibilitychange', this.onVisibilityChange);
+    window.addEventListener('avio:motion-changed', this.onVisibilityChange);
     window.addEventListener('pointermove', this.onPointerMove, {passive:true});
     this.measure();
     this.syncLoop();
@@ -73,7 +74,7 @@ export class TechFieldComponent implements AfterViewInit, OnDestroy {
     cancelAnimationFrame(this.raf);
     this.raf = 0;
     if (!this.context) return;
-    if (this.reducedMotion || !this.visible || document.hidden) {
+    if (this.reducedMotion || document.documentElement.classList.contains('limited-motion') || !this.visible || document.hidden) {
       this.render(0);
     } else {
       this.raf = requestAnimationFrame(this.frame);
@@ -81,7 +82,7 @@ export class TechFieldComponent implements AfterViewInit, OnDestroy {
   }
   private frame = (time: number): void => {
     this.render(time);
-    if (!this.reducedMotion && this.visible && !document.hidden) this.raf = requestAnimationFrame(this.frame);
+    if (!this.reducedMotion && !document.documentElement.classList.contains('limited-motion') && this.visible && !document.hidden) this.raf = requestAnimationFrame(this.frame);
   };
   private render(time: number): void {
     const ctx = this.context;
@@ -149,6 +150,7 @@ export class TechFieldComponent implements AfterViewInit, OnDestroy {
     this.visibilityObserver?.disconnect();
     this.motionMedia?.removeEventListener('change', this.onMotionChange);
     document.removeEventListener('visibilitychange', this.onVisibilityChange);
+    window.removeEventListener('avio:motion-changed', this.onVisibilityChange);
     window.removeEventListener('pointermove', this.onPointerMove);
   }
 }
