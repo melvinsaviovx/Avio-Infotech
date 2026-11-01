@@ -34,6 +34,6 @@ export const PRINCIPLES = [
 ];
 
 export const LEADERS = [
-  { name: 'Melvin Savio V X', role: 'CEO & Co-Founder', image: 'https://avioinfotech.in/melvin.jpg', imageDescription: 'Melvin Savio V X', bio: 'Focused on the direction of the business, meaningful innovation, and delivering technology that creates tangible value.'},
-  { name: 'Shalvin Savio V X', role: 'CTO & Co-Founder', image: 'https://avioinfotech.in/shalvin.jpeg', imageDescription: 'Shalvin Savio V X', bio: 'Focused on the engineering direction, scalable systems, and turning thoughtful ideas into dependable digital solutions.'},
+  { name: 'Melvin Savio V X', role: 'CEO & Co-Founder', image: 'https://avioinfotech.in/melvin.jpg', fallbackImage: '/founders/melvin-monogram.svg', imageDescription: 'Melvin Savio V X', bio: 'Focused on the direction of the business, meaningful innovation, and delivering technology that creates tangible value.'},
+  { name: 'Shalvin Savio V X', role: 'CTO & Co-Founder', image: 'https://avioinfotech.in/shalvin.jpeg', fallbackImage: '/founders/shalvin-monogram.svg', imageDescription: 'Shalvin Savio V X', bio: 'Focused on the engineering direction, scalable systems, and turning thoughtful ideas into dependable digital solutions.'},
 ];

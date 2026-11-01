@@ -8,7 +8,7 @@ import { SITE } from '../core/site-data';
    <a routerLink="/contact" class="button button-ivory">Discuss a project</a>
  </div>
  <div class="shell footer-grid">
-   <div class="footer-brand"><a routerLink="/" class="footer-name">AVIO <span>INFOTECH</span></a><p>Thoughtful software engineering and digital products, made for people and business.</p><span>Kanniyakumari, Tamil Nadu, India</span></div>
+   <div class="footer-brand"><a routerLink="/" class="footer-name" aria-label="Avio Infotech — Home"><img class="footer-logo" src="/brand/avio-nav-mark.webp" alt="" width="66" height="66" loading="lazy" decoding="async" aria-hidden="true" /><span class="footer-wordmark">AVIO <span>INFOTECH</span></span></a><p>Thoughtful software engineering and digital products, made for people and business.</p><span>Kanniyakumari, Tamil Nadu, India</span></div>
    <div class="footer-links"><strong>Explore</strong><a routerLink="/services">What we do</a><a routerLink="/company">Our story</a><a routerLink="/ventures">Archovexa</a><a routerLink="/leadership">Our people</a></div>
    <div class="footer-links"><strong>Get in touch</strong><a routerLink="/contact">Project enquiry</a><a [href]="'tel:'+site.tel">{{site.phone}}</a><a routerLink="/contact">Contact details</a></div>
    <div class="footer-links"><strong>Information</strong><a routerLink="/privacy">Privacy policy</a><a routerLink="/terms">Terms of use</a><button type="button" class="plain-link" (click)="openCookies()">Cookie preferences</button></div>

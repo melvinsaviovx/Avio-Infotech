@@ -5,7 +5,8 @@ import { filter } from 'rxjs';
 <header class="masthead" [class.masthead-scrolled]="scrolled()">
   <div class="shell masthead-inner">
     <a routerLink="/" class="wordmark" aria-label="Avio Infotech — Home" (click)="closeMenu()">
-      <span>AVIO <small>INFOTECH</small></span>
+      <img class="wordmark-logo" src="/brand/avio-nav-mark.webp" alt="" width="56" height="56" decoding="async" aria-hidden="true" />
+      <span class="wordmark-title">AVIO <small>INFOTECH</small></span>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a routerLink="/services" routerLinkActive="selected">What we do</a>

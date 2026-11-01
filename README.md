@@ -53,3 +53,10 @@ A `vercel.json` is included. Confirm the output path with your Angular build (`d
 ## Local QA completed
 
 TypeScript parsing: no syntax errors (all 18 `.ts` files). CSS parsed successfully. All static `routerLink` destinations resolve to known routes. No unwanted 01–05 UI counters or the removed company phrase remain. Desktop and mobile hero layout rendered through static markup with no horizontal overflow. **This is not a substitute for an Angular production build or full E2E browser test.**
+
+
+## Header/footer logo and founder assets
+
+The supplied AVIO mark appears beside the company name in both the top-left navigation and bottom-left footer, using `public/brand/avio-nav-mark.webp`. It is a resized export of the supplied logo (not a newly drawn logo).
+
+Founder-specific image assets now live in `public/founders/`. See that folder's README for replacing the live-site photo URLs with local portrait files; branded SVG monogram fallbacks are included.
