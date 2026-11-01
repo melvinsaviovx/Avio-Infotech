@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SITE } from '../core/site-data';
 @Component({imports:[RouterLink],template:`
-<section class="policy-hero"><div class="container"><div class="page-breadcrumb">AVIO <span>/</span> INFORMATION</div><span class="eyebrow light">LEGAL / 02</span><h1>TERMS OF <em>USE.</em></h1><p>Important information about visiting this website.</p></div></section>
-<section class="policy-body surface-white"><div class="container policy-layout"><aside><span>TERMS / AVIO INFOTECH</span><a routerLink="/contact">Questions? Contact us </a></aside><article>
-<p class="policy-notice"><strong>Publication review required.</strong> This is a starting template, not a legal opinion. Have qualified counsel verify it and approve the effective date before using it as an official policy.</p>
-<h2>1. Website purpose</h2><p>The {{site.name}} website provides general information about our company, services, ideas and ventures. It is not a binding offer or guarantee of service availability.</p>
-<h2>2. Accuracy of content</h2><p>We aim to keep the information clear and useful, but descriptions and features may change. Product concepts described as “in development” represent intended direction rather than promises of completed functionality.</p>
-<h2>3. Intellectual property</h2><p>Unless otherwise stated, original copy, designs and other website materials are provided for viewing in connection with this website. Third-party marks and content remain the property of their respective owners.</p>
-<h2>4. External links</h2><p>Some pages may link to external sites. External providers control their own content and availability.</p>
-<h2>5. Enquiries</h2><p>The included enquiry form creates a draft locally for the visitor to copy. It does not send an enquiry automatically. Contact us using the verified details on our <a routerLink="/contact">contact page</a>.</p>
-<h2>6. Amendments</h2><p>Website information and these terms may be updated as the company, product and services evolve. Confirm appropriate governing-law, limitation-of-liability, dispute resolution and other jurisdictional provisions with legal counsel before publication.</p>
-</article></div></section>`})
-export class TermsPage {readonly site=SITE;}
+<section class="inner-hero legal-hero"><div class="shell inner-hero-content"><span class="small-label">INFORMATION</span><h1>Terms of <em>use.</em></h1><p>Helpful information about using this website.</p></div></section>
+<section class="legal-section"><div class="shell legal-layout"><aside><span class="small-label">AVIO INFOTECH</span><p>Have a question?</p><a routerLink="/contact" class="text-action text-action-dark">Contact us</a></aside><article>
+<div class="legal-review"><strong>Publication review required.</strong> This is a starting template, not legal advice. Confirm governing law, obligations, disclaimers and applicable requirements with counsel before publishing.</div>
+<h2>About this website</h2><p>The {{site.name}} website provides general information about the company, services and product development. It does not create a binding contractual offer.</p>
+<h2>Content and availability</h2><p>We aim to keep information accurate, but services and product concepts may change. Descriptions of in-development products do not guarantee that individual features are currently available.</p>
+<h2>Content ownership</h2><p>Unless stated otherwise, original website design and materials are provided for personal viewing and evaluating the company. Third-party names and trademarks belong to their respective owners.</p>
+<h2>Other websites</h2><p>Linked external websites operate independently; we cannot guarantee their availability or content.</p>
+<h2>Enquiries</h2><p>The website's enquiry form prepares a message in your browser for you to copy. It does not send a message automatically. Please use the verified contact details on the <a routerLink="/contact">contact page</a> to reach us.</p>
+<h2>Updates</h2><p>These terms may change as the company and website evolve. The final publication date, dispute handling and local legal provisions must be verified prior to public release.</p>
+</article></div></section>
+`})
+export class TermsPage{readonly site=SITE;}

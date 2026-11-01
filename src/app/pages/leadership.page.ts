@@ -2,19 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LEADERS } from '../core/site-data';
 import { RevealDirective } from '../shared/reveal.directive';
-
-@Component({
-  imports: [RouterLink, RevealDirective],
-  template: `
-  <section class="page-hero leadership-hero"><div class="container page-hero-inner"><div class="page-breadcrumb">AVIO <span>/</span> LEADERSHIP</div><span class="eyebrow light page-eyebrow">THE PEOPLE BEHIND THE PERSPECTIVE</span><h1 class="page-giant">OUR<br><em>LEADERSHIP.</em></h1><div class="page-hero-description"><p>Meet the founders shaping the company's direction, culture, and technical ambition.</p><span>EXPLORE BELOW </span></div></div></section>
-  <section class="section surface-white"><div class="container"><div class="section-meta"><span class="eyebrow">01 / THE FOUNDERS</span><span>THE PEOPLE GUIDING AVIO</span></div><div class="leadership-grid">
-    @for (leader of leaders; track leader.name; let i = $index) {
-      <article class="leader-card" appReveal><div class="leader-image"><img [src]="leader.image" [alt]="leader.imageDescription" loading="lazy" (error)="imageError($event)"/><div class="leader-fallback" aria-hidden="true"><span>AV</span></div><span class="leader-photo-no">0{{i+1}} / 02</span></div><div class="leader-info"><span class="eyebrow">{{leader.role}}</span><h2>{{leader.name}}</h2><p>{{leader.bio}}</p></div></article>
-    }
-  </div><div class="leadership-outro" appReveal><span>THE NEXT CHAPTER IS BEING WRITTEN.</span><p>Curiosity, conviction and a commitment to good work are at the heart of what we are building.</p><a routerLink="/company" class="text-link dark-link">More about Avio <span></span></a></div></div></section>
-  `
-})
-export class LeadershipPage {
-  readonly leaders = LEADERS;
-  imageError(event: Event): void { const img = event.target as HTMLImageElement; img.style.opacity = '0'; }
-}
+@Component({imports:[RouterLink,RevealDirective],template:`
+<section class="inner-hero people-hero"><div class="shell inner-hero-content"><span class="small-label">OUR PEOPLE</span><h1>Built by people<br><em>who care.</em></h1><p>Meet the founders shaping the vision and technical direction at Avio Infotech.</p></div><div class="inner-hero-orb" aria-hidden="true"></div></section>
+<section class="leadership-section"><div class="shell"><div class="leadership-intro" appReveal><span class="small-label">MEET THE FOUNDERS</span><h2>Leadership with<br><em>intention.</em></h2></div><div class="founders-grid">@for (leader of leaders;track leader.name){<article class="founder-card" appReveal><div class="founder-portrait"><img [src]="leader.image" [alt]="leader.imageDescription" loading="lazy" (error)="imageError($event)"/><div class="portrait-placeholder" aria-hidden="true">AVIO</div></div><div class="founder-description"><span>{{leader.role}}</span><h3>{{leader.name}}</h3><p>{{leader.bio}}</p></div></article>}</div><div class="leadership-close" appReveal><p>We believe the best work comes from staying curious, listening closely and building for the long term.</p><a routerLink="/company" class="button button-dark">Discover our story</a></div></div></section>
+`})
+export class LeadershipPage{readonly leaders=LEADERS;imageError(event:Event){const im=event.target as HTMLImageElement;im.style.display='none';}}

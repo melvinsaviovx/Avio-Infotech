@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SITE } from '../core/site-data';
 @Component({imports:[RouterLink],template:`
-<section class="policy-hero"><div class="container"><div class="page-breadcrumb">AVIO <span>/</span> INFORMATION</div><span class="eyebrow light">LEGAL / 01</span><h1>PRIVACY <em>POLICY.</em></h1><p>How personal information may be handled when you use this website.</p></div></section>
-<section class="policy-body surface-white"><div class="container policy-layout"><aside><span>PRIVACY / AVIO INFOTECH</span><a routerLink="/contact">Questions? Contact us </a></aside><article>
-<p class="policy-notice"><strong>Publication review required.</strong> This is an informational starter policy. Confirm actual data flows, analytics, cookies, forms, hosting providers and applicable laws with qualified counsel before publishing.</p>
-<h2>1. About this website</h2><p>{{site.name}} operates this company website to explain its services and products and to provide ways to make contact. Our published office address is {{site.address}}.</p>
-<h2>2. Information you choose to provide</h2><p>On this prototype, the enquiry form processes the information you type in your browser to prepare a draft that you can copy. It does not submit that draft to our servers. If you contact us by telephone or another channel, information you provide through that channel may be handled for the purposes of responding.</p>
-<h2>3. Technical data</h2><p>Website hosting providers may process technical connection information, such as IP addresses, browser information and request logs, to deliver and secure the website. Details depend on the hosting provider selected for deployment.</p>
-<h2>4. External services</h2><p>This design loads fonts from Google Fonts and may link to other websites. External sites operate according to their own policies. Confirm the final third-party services in the production deployment.</p>
-<h2>5. Cookies and analytics</h2><p>The supplied source does not intentionally set marketing cookies or include a third-party analytics script. Review this section if analytics, consent tools, advertising or other integrations are added.</p>
-<h2>6. Contact and updates</h2><p>For privacy enquiries, use the contact information on our <a routerLink="/contact">contact page</a>. The effective date, retention periods, legal bases, rights-request procedures and other jurisdiction-specific disclosures must be reviewed before publication.</p>
-</article></div></section>`})
-export class PrivacyPage {readonly site=SITE;}
+<section class="inner-hero legal-hero"><div class="shell inner-hero-content"><span class="small-label">INFORMATION</span><h1>Privacy <em>policy.</em></h1><p>How this website handles information and your preferences.</p></div></section>
+<section class="legal-section"><div class="shell legal-layout"><aside><span class="small-label">AVIO INFOTECH</span><p>Questions about privacy?</p><a routerLink="/contact" class="text-action text-action-dark">Contact us</a></aside><article>
+<div class="legal-review"><strong>Publication review required.</strong> This starter policy must be reviewed against your actual hosting, data processing and applicable law before going live.</div>
+<h2>Who we are</h2><p>{{site.name}} provides information about our technology services and software products. Our published address is {{site.address}}.</p>
+<h2>Information you provide</h2><p>The current enquiry form processes the details you enter inside your browser to create a copyable message. It does not send that information to Avio Infotech servers. If you call us or use a different channel, the information you share through that channel may be used to respond.</p>
+<h2>Website hosting</h2><p>Our selected hosting provider may process IP addresses, device information and technical request logs to provide and protect the website. Verify the final provider and retention periods before publication.</p>
+<h2>Cookies and local preferences</h2><p>This website currently does not load an analytics or advertising tracker. It stores a small browser preference record named <code>avio_cookie_preferences_v1</code> to remember your cookie selection and whether enhanced visual motion is enabled. This record stays in your browser and can be changed through “Cookie preferences” in the footer. Your browser's reduced-motion setting takes priority.</p>
+<h2>External links and images</h2><p>Some pages link to independent sites, and founder photos may be loaded from the existing Avio Infotech website. Third-party providers have their own privacy practices.</p>
+<h2>Changes and requests</h2><p>For questions and rights requests, contact us using the details on our <a routerLink="/contact">contact page</a>. The effective date, data retention and jurisdiction-specific rights must be confirmed prior to publishing.</p>
+</article></div></section>
+`})
+export class PrivacyPage{readonly site=SITE;}
